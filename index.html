@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script src="jquery-3.1.1.min.js"></script>	
+		<script src="simulation.js"></script>
+	</head>
+	<body>
+		<div style="margin: 1.5em;">
+			<div class="page-header">
+				<h1>Plague inc</h1>
+				<p class="lead">
+					Projeto Simulacion
+					<br>
+					Autores: 
+				</p>
+			</div>
+			<div>
+				<div class="col-md-12">
+					<div class="panel panel-danger row">
+						<div class="panel-heading">
+							<h2 class="panel-title">Controles</h2>
+						</div>
+						<div class="panel-body">
+							<p style="display: inline-block;">
+								<button id="btnInfectarPais" type="button" class="btn-xs btn-danger">Definir primer infectado</button>
+							</p>							
+							<p style="display: inline-block;">
+								<button id="btnSimularPropagacion" type="button" class="btn-xs btn-danger">Simular propagacion epidemica</button>
+							</p>							
+							<p style="display: inline-block;">
+								<button id="btnPararPropagacion" type="button" class="btn-xs btn-danger">Parar propagacion Automatica</button>
+							</p>
+							<p style="display: inline-block;">
+								<button id="btnRemoverMosquitos" type="button" class="btn-xs btn-danger">Remover Mosquitos</button>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<canvas id="mycanvas"></canvas>
+			</div>
+			<div class="col-md-4">
+				<div class="panel panel-danger">
+					<div class="panel-heading">
+						<h2 class="panel-title">Parametros y configuraciones</h2>
+					</div>
+					<div class="panel-body">
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon1">Generacion</span>
+							<input type="text" id="generacion" class="form-control" aria-describedby="basic-addon1">
+						</div>
+													
+							<input id="automaticoStatus" type="text" readonly class="form-control">
+						
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="panel panel-danger">
+					<div class="panel-heading">
+						<h2 class="panel-title">Cantidad de infectados</h2>
+					</div>
+					<div class="panel-body">
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon1">Globalmente</span>
+							<input type="text" readonly id="cinfectadosglobal" class="form-control" value="0">
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon1">America del Norte</span>
+							<input type="text" readonly id="cinfectadosanorte" class="form-control" value="0">
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon1">America del Sur</span>
+							<input type="text" readonly id="cinfectadosasur" class="form-control" value="0">
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon1">Europa</span>
+							<input type="text" readonly id="cinfectadoseuropa" class="form-control" value="0">
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon1">Asia</span>
+							<input type="text" readonly id="cinfectadosasia" class="form-control" value="0">
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon1">Africa</span>
+							<input type="text" readonly id="cinfectadosafrica" class="form-control" value="0">
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon1">Oceania</span>
+							<input type="text" readonly id="cinfectadosoceania" class="form-control" value="0">
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="panel panel-danger">
+					<div class="panel-heading">
+						<h2 class="panel-title">Cantidad de entes de propagacion</h2>
+					</div>
+					<div class="panel-body">
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon1">Mosquitos</span>
+							<input type="text" id="cmosquitos" readonly class="form-control" value="0">
+						</div>						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<footer class="footer">
+			<div class="container">
+				<p>
+					
+				</p>
+			</div>
+		</footer>
+		
+		
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
